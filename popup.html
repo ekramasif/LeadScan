@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeadScan</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <span class="logo">LeadScan</span>
+      <button id="btn-tab-scan" class="tab active">Scan</button>
+      <button id="btn-tab-saved" class="tab">Saved (<span id="saved-count">0</span>)</button>
+    </div>
+
+    <div id="tab-scan">
+      <div class="pad">
+        <button id="btn-scan" class="btn-primary full">Scan This Page</button>
+      </div>
+
+      <div id="state-loading" class="hidden center-msg">Scanning...</div>
+      <div id="state-empty" class="hidden center-msg">No contact info found on this page.</div>
+
+      <div id="scan-results" class="hidden">
+        <div class="section">
+          <div class="label">Company</div>
+          <div id="res-company" class="val-main"></div>
+          <div id="res-domain" class="val-sub"></div>
+          <div id="res-desc" class="val-desc"></div>
+        </div>
+
+        <div class="section">
+          <div class="label">Emails <span id="email-badge" class="badge"></span></div>
+          <div id="res-emails"></div>
+        </div>
+
+        <div class="section">
+          <div class="label">Phones <span id="phone-badge" class="badge"></span></div>
+          <div id="res-phones"></div>
+        </div>
+
+        <div class="section">
+          <div class="label">Social</div>
+          <div id="res-social"></div>
+        </div>
+
+        <div class="actions">
+          <button id="btn-save" class="btn-primary">Save Lead</button>
+          <button id="btn-copy-email" class="btn-ghost">Copy Emails</button>
+        </div>
+        <div id="save-msg" class="hidden save-msg"></div>
+      </div>
+    </div>
+
+    <div id="tab-saved" class="hidden">
+      <div class="saved-bar">
+        <span id="saved-total"></span>
+        <button id="btn-export" class="btn-primary small">Export CSV</button>
+        <button id="btn-clear-all" class="btn-danger small">Clear All</button>
+      </div>
+      <div id="saved-list"></div>
+      <div id="saved-empty" class="hidden center-msg">No saved leads yet.</div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

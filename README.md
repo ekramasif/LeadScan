@@ -1,4 +1,4 @@
-# LeadScan Chrome Extension
+﻿# LeadScan Chrome Extension
 
 LeadScan is a lightweight Chrome extension that scans the current webpage for public contact details, shows the results in a popup, stores saved leads locally in the browser, and exports saved leads to CSV.
 
@@ -223,9 +223,9 @@ At the moment, this repository contains:
 - [`agent.md`](./agent.md): the original build specification
 - [`lead-gen-extension/`](./lead-gen-extension): the working extension source
 
-## Future Improvements
+## Open Source Roadmap
 
-Possible next steps:
+This project is a good fit for small, focused open-source contributions. Areas that would benefit from community work include:
 
 - Add site-specific extraction rules for LinkedIn, Crunchbase, or directory websites
 - Add copy buttons for phones and social links
@@ -233,3 +233,11 @@ Possible next steps:
 - Add import support for previously exported CSV files
 - Add pagination or search in saved leads
 - Add stronger extraction heuristics for names and company details
+
+If you want to contribute, practical pull requests are especially useful when they:
+
+- improve extraction accuracy on real-world sites
+- reduce false positives in email or phone detection
+- improve popup usability without adding unnecessary complexity
+- keep the extension fully local-first and dependency-light
+
